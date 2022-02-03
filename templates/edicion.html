@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Edición</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.nombre_evento}}
+    {{ form.categoria }}
+    {{ form.lugar }}
+    {{ form.direccion }}
+    {{ form.fecha_inicio }}
+    {{ form.fecha_fin }}
+    {{ form.tipo }}
+    {{ form.submit }}
+</form>
+    <div class="wy-table-responsive"><table class="docutils align-center">
+    <colgroup>
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    </colgroup>
+
+    <tbody>
+    <tr class="row-odd">
+        <td><p><cite>nombre evento</cite></p></td>
+        <td><p><cite>categoria</cite></p></td>
+        <td><p><cite>lugar</cite></p></td>
+        <td><p><cite>direccion</cite></p></td>
+        <td><p><cite>fecha inicio</cite></p></td>
+        <td><p><cite>fecha fin</cite></p></td>
+        <td><p><cite>tipo</cite></p></td>
+    </tr>
+
+    <tr class="row-even"><td><p>{{campos.nombre_evento}}</p></td>
+        <td><p></p>{{campos.categoria}}</td>
+        <td><p></p>{{campos.lugar}}</td>
+        <td><p></p>{{campos.direccion}}</td>
+        <td><p></p>{{campos.fecha_inicio}}</td>
+        <td><p></p>{{campos.fecha_fin}}</td>
+        <td><p></p>{{campos.tipo}}</td>
+
+    </tr>
+</tbody>
+
+
+</body>
+</html>

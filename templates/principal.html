@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>principal</title>
+</head>
+
+<body>
+    <div class="wy-table-responsive"><table class="docutils align-center">
+    <colgroup>
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    <col style="width: 1%">
+    </colgroup>
+   <h1>Eventos</h1>
+    <tbody>
+    <tr class="row-odd">
+        <td><p><cite>ID</cite></p></td>
+        <td><p><cite>nombre evento</cite></p></td>
+        <td><p><cite>categoria</cite></p></td>
+        <td><p><cite>lugar</cite></p></td>
+        <td><p><cite>direccion</cite></p></td>
+        <td><p><cite>fecha inicio</cite></p></td>
+        <td><p><cite>fecha fin</cite></p></td>
+        <td><p><cite>tipo</cite></p></td>
+    </tr>
+
+    {% for even in eventos %}
+    <tr class="row-even"><td><p>{{even.id}}</p></td>
+        <td><p>{{even.nombre_evento}}</p></td>
+        <td><p>{{ even.categoria }}</p></td>
+        <td><p>{{even.lugar }}</p></td>
+        <td><p>{{ even.direccion }}</p></td>
+        <td><p>{{even.fecha_inicio}}</p></td>
+        <td><p>{{ even.fecha_fin }}</p></td>
+        <td><p>{{ even.tipo }}</p></td>
+    </tr>
+       {% endfor %}
+</tbody>
+</table></div>
+    <button type="button"><a href="{{ url_for('añadir_evento')}}">Nuevo Evento</a></button>
+    <button type="button"><a href="{{ url_for('editar_evento')}}">Editar Evento</a></button>
+    <button type="button"><a href="{{ url_for('eliminar_evento')}}">Eliminar Evento</a><br></button>
+    <a href="{{ url_for('cerrar_sesion')}}">Cerrar Sesión</a>
+
+</body>
+</html>
